@@ -1,11 +1,16 @@
 #!/usr/bin/python
-"""pascal Traiangle
+"""Pascal's Triangle Generator
 """
 from math import factorial
 
 
 def pascal_triangle(n):
-    """print a pascal triangle"""
+    """Generate Pascal's triangle with n rows.
+    Args:
+        n (int): The number of rows in the triangle.
+    Returns:
+        list: A list of lists representing Pascal's triangle.
+    """
     if n <= 0:
         return []
 
@@ -18,3 +23,4 @@ def pascal_triangle(n):
         triangle.append(row)
 
     return triangle
+
