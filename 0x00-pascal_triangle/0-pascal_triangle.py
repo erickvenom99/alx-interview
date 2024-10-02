@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Pascal's Triangle Generator
 """
 from math import factorial
@@ -23,4 +23,3 @@ def pascal_triangle(n):
         triangle.append(row)
 
     return triangle
-
