@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Generates Pascal's Triangle
 """
-from math import factorial
+Generates pascal triangle
+"""
 
 
 def pascal_triangle(n):
@@ -9,20 +9,15 @@ def pascal_triangle(n):
     Args:
         n (int): Number of rows in the triangle.
     Returns:
-        list: Lists representing the triangle.
+        list: A list of lists representing Pascal's triangle.
     """
     if n <= 0:
         return []
-
-    triangle = []
-
-    for i in range(n):
-        row = []
-        for j in range(i + 1):
-            if j == 0 or j == i:
-                row.append(1)
-            else:
-                row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-        triangle.append(row)
-
+    triangle = [[1]]
+    for i in range(1, n):
+        rowNo = [1]
+        for j in range(1, i):
+            rowNo.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
+        rowNo.append(1)
+        triangle.append(rowNo)
     return triangle
