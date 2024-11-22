@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 
 """
 Rotate 2D matrix module
@@ -22,4 +22,4 @@ def rotate_2d_matrix(matrix):
             matrix[k][j], matrix[j][k] = matrix[j][k], matrix[k][j]
 
     for k in range(n):
-        matrix[k].reverse()
+        matrix[k] = matrix[k][::-1]
