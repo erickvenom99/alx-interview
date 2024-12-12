@@ -1,4 +1,4 @@
-#!/usr/bn/python3
+#!/usr/bin/python3
 """
 MODULES DETERMINE THE WINNER IN A PRIME GAME
 """
